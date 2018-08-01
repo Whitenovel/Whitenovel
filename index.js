@@ -7,3 +7,7 @@ const bot = new TelegramBot(TOKEN, {polling: true})
 bot.on('message', msg => {
     bot.sendMessage(msg.chat.id, `Hello from HEROKU, bot says: "HI,${msg.from.first_name}"`)
 })
+
+require('http').createServer().listen(process.env.PORT || 5000).on('request', function(req, res){
+    res.end('')
+})﻿
