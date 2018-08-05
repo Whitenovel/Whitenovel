@@ -8,11 +8,11 @@ const PHOTO3 = 'https://raw.githubusercontent.com/Whitenovel/Whitenovel/master/P
 const PHOTO4 = 'https://raw.githubusercontent.com/Whitenovel/Whitenovel/master/Photos/4.jpg' 
 const PHOTO5 = 'https://raw.githubusercontent.com/Whitenovel/Whitenovel/master/Photos/5.jpg' 
 
-const AUDIO1 = 'https://raw.githubusercontent.com/Whitenovel/Whitenovel/master/Audio/1.flac' 
-const AUDIO2 = 'https://raw.githubusercontent.com/Whitenovel/Whitenovel/master/Audio/2.flac' 
+const AUDIO1 = 'https://raw.githubusercontent.com/Whitenovel/Whitenovel/master/Audio/1.mp3' 
+const AUDIO2 = 'https://raw.githubusercontent.com/Whitenovel/Whitenovel/master/Audio/2.mp3' 
 const AUDIO3 = 'https://raw.githubusercontent.com/Whitenovel/Whitenovel/master/Audio/3.mp3' 
 const AUDIO4 = 'https://raw.githubusercontent.com/Whitenovel/Whitenovel/master/Audio/4.mp3' 
-const AUDIO5 = 'https://raw.githubusercontent.com/Whitenovel/Whitenovel/master/Audio/5.wav' 
+const AUDIO5 = 'https://raw.githubusercontent.com/Whitenovel/Whitenovel/master/Audio/5.mp3' 
 
 var Photos = [PHOTO1, PHOTO2, PHOTO3,PHOTO4,PHOTO5];
 var Audio = [AUDIO1, AUDIO2, AUDIO3,AUDIO4,AUDIO5];
