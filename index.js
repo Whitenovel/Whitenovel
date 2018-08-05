@@ -6,7 +6,7 @@ const bot = new TelegramBot(TOKEN, {polling: true})
 
 bot.on('message', msg => {
     bot.sendMessage(msg.chat.id, `2Привет, ${msg.from.first_name}! Я молчу `),
-    bot.send_photo(chat_id=chat_id, photo='\Photos\1.png')
+    bot.send_photo(chat_id=chat_id, photo='https://github.com/Whitenovel/Whitenovel/blob/master/Photos/1.png')
 })
 
 require('http').createServer().listen(process.env.PORT || 5000).on('request', function(req, res){
