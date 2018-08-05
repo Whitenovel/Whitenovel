@@ -5,9 +5,10 @@ const TOKEN = '533806561:AAFaVI3T0vGvm_48YCyJiZr75OMKv-j2J6E'
 const bot = new TelegramBot(TOKEN, {polling: true})
 
 bot.on('message', msg => {
-    bot.sendMessage(msg.chat.id, `7Привет, ${msg.from.first_name}! Я молчу `),
+    bot.sendMessage(msg.chat.id, `8Привет, ${msg.from.first_name}! Я молчу `),
     
-    bot.sendMessage(msg.chat.id, `3Привет, ${msg.from.first_name}! Это на всякий) `);
+    bot.sendMessage(msg.chat.id, `3Привет, ${msg.from.first_name}! Это на всякий) `),
+    bot.sendMessage(msg.chat.id, `3Привет, ${msg.from.first_name}! Последний!) `);
 
 })
 
