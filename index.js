@@ -7,7 +7,7 @@ const bot = new TelegramBot(TOKEN, {polling: true})
 bot.on('message', msg => {
     bot.sendMessage(msg.chat.id, `4Привет, ${msg.from.first_name}! Я молчу `),
     bot.send_photo(msg.chat.id, photo='https://raw.githubusercontent.com/Whitenovel/Whitenovel/master/Photos/1.png'),
-    bot.sendMessage(msg.chat.id, `3Привет, ${msg.from.first_name}! Это на всякий) `),
+    bot.sendMessage(msg.chat.id, `3Привет, ${msg.from.first_name}! Это на всякий) `)
 
 })
 
