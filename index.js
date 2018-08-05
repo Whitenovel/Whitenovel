@@ -8,18 +8,27 @@ const PHOTO3 = 'https://raw.githubusercontent.com/Whitenovel/Whitenovel/master/P
 const PHOTO4 = 'https://raw.githubusercontent.com/Whitenovel/Whitenovel/master/Photos/4.jpg' 
 const PHOTO5 = 'https://raw.githubusercontent.com/Whitenovel/Whitenovel/master/Photos/5.jpg' 
 
+const AUDIO1 = 'https://raw.githubusercontent.com/Whitenovel/Whitenovel/master/Audio/1.flac' 
+const AUDIO2 = 'https://raw.githubusercontent.com/Whitenovel/Whitenovel/master/Audio/2.flac' 
+const AUDIO3 = 'https://raw.githubusercontent.com/Whitenovel/Whitenovel/master/Audio/3.mp3' 
+const AUDIO4 = 'https://raw.githubusercontent.com/Whitenovel/Whitenovel/master/Audio/4.mp3' 
+const AUDIO5 = 'https://raw.githubusercontent.com/Whitenovel/Whitenovel/master/Audio/5.wav' 
+
 var Photos = [PHOTO1, PHOTO2, PHOTO3,PHOTO4,PHOTO5];
+var Audio = [AUDIO1, AUDIO2, AUDIO3,AUDIO4,AUDIO5];
 
 const bot = new TelegramBot(TOKEN, {polling: true})
 
 
 
 bot.on('message', msg => {
-    var rand = Photos[Math.floor(Math.random() * Photos.length)];
-    bot.sendMessage(msg.chat.id, `8Привет, ${msg.from.first_name}! Я молчу `),
-    bot.sendMessage(msg.chat.id, `6Привет, ${msg.from.first_name}! молчу опять `),
-    bot.sendPhoto(msg.chat.id, photo=rand),
-    bot.sendMessage(msg.chat.id, `3Привет, ${msg.from.first_name}! Это на всякий) `);
+    var randPhoto = Photos[Math.floor(Math.random() * Photos.length)];
+    var randAudio = Audio[Math.floor(Math.random() * Audio.length)];
+    bot.sendMessage(msg.chat.id, `Приветттт, ${msg.from.first_name}! Я Momo `),
+    bot.sendMessage(msg.chat.id, `Зачччем ттты меня потревожжжил? `),
+    bot.sendPhoto(msg.chat.id, photo=randPhoto),
+    bot.sendAudio(msg.chat.id, audio=randAudio),
+    bot.sendMessage(msg.chat.id, `Убирайся! `);
 
 })
 
