@@ -41,8 +41,8 @@ setInterval(function()
 
 
      function Act1 () {
-        var randPhoto = Photos[Math.floor(Math.random() * Photos.length)];
-        var randAudio = Audio[Math.floor(Math.random() * Audio.length)];
+        var randPhoto = Photos[Math.floor(Math.random() * Photos.length)],
+        var randAudio = Audio[Math.floor(Math.random() * Audio.length)],
         bot.sendMessage(msg.chat.id, `Приветттт, ${msg.from.first_name}! Я Momo `),
         bot.sendPhoto(msg.chat.id, photo=randPhoto),
         bot.sendAudio(msg.chat.id, audio=randAudio);
