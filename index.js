@@ -22,14 +22,9 @@ const bot = new TelegramBot(TOKEN, {polling: true})
 
 
 bot.on('message', msg => {
-    var randPhoto = Photos[Math.floor(Math.random() * Photos.length)];
-    var randAudio = Audio[Math.floor(Math.random() * Audio.length)];
-    bot.sendMessage(msg.chat.id, `Приветттт, ${msg.from.first_name}! Я Momo `),
-    bot.sendMessage(msg.chat.id, `Зачччем ттты меня потревожжжил? `),
-    bot.sendPhoto(msg.chat.id, photo=randPhoto),
-    bot.sendAudio(msg.chat.id, audio=randAudio),
-    bot.sendMessage(msg.chat.id, `Убирайся! `);
-
+     setTimeout(Act1, 5000);
+     setTimeout(Act2, 5000);
+     setTimeout(Act3, 5000);
 })
 
 require('http').createServer().listen(process.env.PORT || 5000).on('request', function(req, res){
@@ -42,3 +37,22 @@ setInterval(function()
         http.get("https://whiteplaynovel.herokuapp.com/");
      }, 
      300000); // every 5 minutes (300000)
+
+
+
+     function Act1 () {
+        var randPhoto = Photos[Math.floor(Math.random() * Photos.length)];
+        var randAudio = Audio[Math.floor(Math.random() * Audio.length)];
+        bot.sendMessage(msg.chat.id, `Приветттт, ${msg.from.first_name}! Я Momo `);
+     }
+
+     function Act2 () {
+        bot.sendMessage(msg.chat.id, `Зачччем ттты меня потревожжжил? `),
+        bot.sendPhoto(msg.chat.id, photo=randPhoto);
+    }
+
+
+    function Act3 () {
+        bot.sendAudio(msg.chat.id, audio=randAudio),
+        bot.sendMessage(msg.chat.id, `Убирайся! `);
+    }
