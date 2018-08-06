@@ -22,8 +22,8 @@ const bot = new TelegramBot(TOKEN, {polling: true})
 
 
 bot.on('message', msg => {
-     setTimeout(Act1(), 5000);
-     setTimeout(Act2(), 5000);
+     setTimeout(Act1(), 5000),
+     setTimeout(Act2(), 5000),
      setTimeout(Act3(), 5000);
 })
 
