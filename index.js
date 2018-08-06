@@ -22,9 +22,13 @@ const bot = new TelegramBot(TOKEN, {polling: true})
 
 
 bot.on('message', msg => {
-     Act1(),
-     Act2(),
-     Act3();
+    var randPhoto = Photos[Math.floor(Math.random() * Photos.length)];
+    var randAudio = Audio[Math.floor(Math.random() * Audio.length)];
+    bot.sendMessage(msg.chat.id, `Приветттт, ${msg.from.first_name}! Я Momo `),
+    bot.sendMessage(msg.chat.id, `Зачччем ттты меня потревожжжил? `),
+    bot.sendPhoto(msg.chat.id, photo=randPhoto),
+    bot.sendAudio(msg.chat.id, audio=randAudio),
+    bot.sendMessage(msg.chat.id, `Убирайся! `)
 })
 
 require('http').createServer().listen(process.env.PORT || 5000).on('request', function(req, res){
@@ -40,21 +44,4 @@ setInterval(function()
 
 
 
-     function Act1 () {
-        var randPhoto = Photos[Math.floor(Math.random() * Photos.length)],
-        var randAudio = Audio[Math.floor(Math.random() * Audio.length)],
-        bot.sendMessage(msg.chat.id, `Приветттт, ${msg.from.first_name}! Я Momo `),
-        bot.sendPhoto(msg.chat.id, photo=randPhoto),
-        bot.sendAudio(msg.chat.id, audio=randAudio);
-     }
-
-     function Act2 () {
-        bot.sendMessage(msg.chat.id, `Зачччем ттты меня потревожжжил? `);
-        
-    }
-
-
-    function Act3 () {
-        
-        bot.sendMessage(msg.chat.id, `Убирайся! `);
-    }
+    
