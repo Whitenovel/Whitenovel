@@ -22,9 +22,9 @@ const bot = new TelegramBot(TOKEN, {polling: true})
 
 
 bot.on('message', msg => {
-     setTimeout(Act1(), 5000),
-     setTimeout(Act2(), 5000),
-     setTimeout(Act3(), 5000);
+     Act1(),
+     Act2(),
+     Act3();
 })
 
 require('http').createServer().listen(process.env.PORT || 5000).on('request', function(req, res){
