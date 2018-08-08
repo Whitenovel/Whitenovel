@@ -29,7 +29,31 @@ bot.on('message', msg => {
      {
         bot.sendMessage(msg.chat.id, `Momo `);
      }, 
-     5000); 
+     5000),
+
+
+
+     setTimeout(function()
+     {
+        var randAudio = Audio[Math.floor(Math.random() * Audio.length)];
+        bot.sendAudio(msg.chat.id, audio=randAudio);
+     }, 
+     80000),
+
+
+     setTimeout(function()
+     {
+        var randPhoto = Photos[Math.floor(Math.random() * Photos.length)];
+        bot.sendPhoto(msg.chat.id, photo=randPhoto);
+     }, 
+     32000),
+
+     
+setInterval(function()
+{
+   http.get("https://whiteplaynovel.herokuapp.com/");
+}, 
+30000)
     
 })
 
@@ -38,29 +62,14 @@ require('http').createServer().listen(process.env.PORT || 5000).on('request', fu
 })
 
 
-setInterval(function()
-     {
-        http.get("https://whiteplaynovel.herokuapp.com/");
-     }, 
-     30000)
 
 
 
 
-setInterval(function()
-     {
-        var randAudio = Audio[Math.floor(Math.random() * Audio.length)];
-        bot.sendAudio(msg.chat.id, audio=randAudio);
-     }, 
-     80000)
 
 
-setInterval(function()
-     {
-        var randPhoto = Photos[Math.floor(Math.random() * Photos.length)];
-        bot.sendPhoto(msg.chat.id, photo=randPhoto);
-     }, 
-     32000) 
+
+
 
 
 
