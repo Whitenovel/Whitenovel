@@ -14,9 +14,9 @@ const AUDIO3 = 'https://raw.githubusercontent.com/Whitenovel/Whitenovel/master/A
 const AUDIO4 = 'https://raw.githubusercontent.com/Whitenovel/Whitenovel/master/Audio/4.mp3' 
 const AUDIO5 = 'https://raw.githubusercontent.com/Whitenovel/Whitenovel/master/Audio/5.mp3' 
 
-var Photos = [PHOTO1, PHOTO2, PHOTO3,PHOTO4,PHOTO5];
-var Audio = [AUDIO1, AUDIO2, AUDIO3,AUDIO4,AUDIO5];
-var http = require("http");
+var Photos = [PHOTO1, PHOTO2, PHOTO3,PHOTO4,PHOTO5]
+var Audio = [AUDIO1, AUDIO2, AUDIO3,AUDIO4,AUDIO5]
+var http = require("http")
 
 const bot = new TelegramBot(TOKEN, {polling: true})
 
@@ -42,7 +42,7 @@ setInterval(function()
      {
         http.get("https://whiteplaynovel.herokuapp.com/");
      }, 
-     30000); 
+     30000)
 
 
 
@@ -52,7 +52,7 @@ setInterval(function()
         var randAudio = Audio[Math.floor(Math.random() * Audio.length)];
         bot.sendAudio(msg.chat.id, audio=randAudio);
      }, 
-     80000); 
+     80000)
 
 
 setInterval(function()
@@ -60,7 +60,7 @@ setInterval(function()
         var randPhoto = Photos[Math.floor(Math.random() * Photos.length)];
         bot.sendPhoto(msg.chat.id, photo=randPhoto);
      }, 
-     32000); 
+     32000) 
 
 
 
