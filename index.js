@@ -16,26 +16,33 @@ const AUDIO5 = 'https://raw.githubusercontent.com/Whitenovel/Whitenovel/master/A
 
 var Photos = [PHOTO1, PHOTO2, PHOTO3,PHOTO4,PHOTO5];
 var Audio = [AUDIO1, AUDIO2, AUDIO3,AUDIO4,AUDIO5];
+var http = require("http");
 
 const bot = new TelegramBot(TOKEN, {polling: true})
 
 
 
 bot.on('message', msg => {
-    var randPhoto = Photos[Math.floor(Math.random() * Photos.length)];
+    
+
+    setInterval(function()
+     {
+        var randPhoto = Photos[Math.floor(Math.random() * Photos.length)];
     var randAudio = Audio[Math.floor(Math.random() * Audio.length)];
     bot.sendMessage(msg.chat.id, `Приветттт, ${msg.from.first_name}! Я Momo `),
     bot.sendMessage(msg.chat.id, `Зачччем ттты меня потревожжжил? `),
     bot.sendPhoto(msg.chat.id, photo=randPhoto),
     bot.sendAudio(msg.chat.id, audio=randAudio),
     bot.sendMessage(msg.chat.id, `Убирайся! `)
+     }, 
+     10000); 
 })
 
 require('http').createServer().listen(process.env.PORT || 5000).on('request', function(req, res){
     res.end('')
 })
 
-var http = require("http");
+
 setInterval(function()
      {
         http.get("https://whiteplaynovel.herokuapp.com/");
