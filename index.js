@@ -46,14 +46,10 @@ bot.on('message', msg => {
         var randPhoto = Photos[Math.floor(Math.random() * Photos.length)];
         bot.sendPhoto(msg.chat.id, photo=randPhoto);
      }, 
-     32000),
+     32000)
 
-     
-setInterval(function()
-{
-   http.get("https://whiteplaynovel.herokuapp.com/");
-}, 
-30000)
+        
+    
     
 })
 
