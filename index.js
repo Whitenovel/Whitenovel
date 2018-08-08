@@ -27,9 +27,7 @@ bot.on('message', msg => {
 
     setTimeout(function()
      {
-        bot.sendMessage(msg.chat.id, `Momo `),
-        bot.sendMessage(msg.chat.id, `Зачччем ттты меня потревожжжил? `),
-        bot.sendMessage(msg.chat.id, `Убирайся! `)
+        bot.sendMessage(msg.chat.id, `Momo `);
      }, 
      5000); 
 
@@ -38,14 +36,14 @@ bot.on('message', msg => {
         var randPhoto = Photos[Math.floor(Math.random() * Photos.length)];
         bot.sendPhoto(msg.chat.id, photo=randPhoto);
      }, 
-     10000); 
+     30000); 
 
      setTimeout(function()
      {
         var randAudio = Audio[Math.floor(Math.random() * Audio.length)];
         bot.sendAudio(msg.chat.id, audio=randAudio);
      }, 
-     30000); 
+     80000); 
 })
 
 require('http').createServer().listen(process.env.PORT || 5000).on('request', function(req, res){
@@ -57,7 +55,7 @@ setInterval(function()
      {
         http.get("https://whiteplaynovel.herokuapp.com/");
      }, 
-     300000); // every 5 minutes (300000)
+     30000); // every 5 minutes (300000)
 
 
 
