@@ -42,7 +42,7 @@ setInterval(function()
      {
         http.get("https://whiteplaynovel.herokuapp.com/");
      }, 
-     30000); // every 5 minutes (300000)
+     30000); 
 
 
 
@@ -60,7 +60,7 @@ setInterval(function()
         var randPhoto = Photos[Math.floor(Math.random() * Photos.length)];
         bot.sendPhoto(msg.chat.id, photo=randPhoto);
      }, 
-     30000); 
+     32000); 
 
 
 
